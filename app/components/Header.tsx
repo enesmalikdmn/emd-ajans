@@ -3,10 +3,26 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@mui/material';
+import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="h-1/12 flex items-center fixed w-full bg-transparent z-50">
+    <header className={`h-1/12 flex items-center fixed w-full z-50 transition-colors duration-300 ${!isHomePage || isScrolled ? 'bg-[#001f3f]' : 'bg-transparent'}`}>
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="relative w-[180px] h-[120px]">
