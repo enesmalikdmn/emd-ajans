@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@mui/material';
 
 const Header = () => {
@@ -8,9 +9,14 @@ const Header = () => {
     <header className="h-1/12 flex items-center fixed w-full bg-transparent z-50">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-[20px] font-normal">
-            <span className="text-[#fff]">emd</span>
-            <span className="text-[#4A90E2]">Ajans</span>
+          <Link href="/" className="relative w-[180px] h-[120px]">
+            <Image
+              src="/images/logo.png"
+              alt="EMD Ajans Logo"
+              fill
+              className="object-contain"
+              priority
+            />
           </Link>
           
           <div className="flex items-center space-x-8">
