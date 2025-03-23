@@ -34,12 +34,14 @@ body {
 
 .link-hover-animation .text-primary {
   transform: translateY(0);
+  color: white;
 }
 
 .link-hover-animation .text-secondary {
   position: absolute;
   left: 0;
   transform: translateY(100%);
+  color: #4A90E2;
 }
 
 .link-hover-animation:hover .text-primary {

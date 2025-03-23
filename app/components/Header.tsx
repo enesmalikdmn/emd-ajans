@@ -13,19 +13,19 @@ const Header = () => {
           </Link>
           
           <div className="flex items-center space-x-8">
-            <Link href="/about" className="text-white text-sm hover:text-[#4A90E2] transition-colors ml-[24px] link-hover-animation">
+            <Link href="/about" className="text-sm ml-[24px] link-hover-animation">
               <span className="text-primary">Hakkımızda</span>
               <span className="text-secondary">Hakkımızda</span>
             </Link>
-            <Link href="/portfolio" className="text-white text-sm hover:text-[#4A90E2] transition-colors ml-[24px] link-hover-animation">
+            <Link href="/portfolio" className="text-sm ml-[24px] link-hover-animation">
               <span className="text-primary">Projelerimiz</span>
               <span className="text-secondary">Projelerimiz</span>
             </Link>
-            <Link href="/services" className="text-white text-sm hover:text-[#4A90E2] transition-colors ml-[24px] link-hover-animation">
+            <Link href="/services" className="text-sm ml-[24px] link-hover-animation">
               <span className="text-primary">Hizmetlerimiz</span>
               <span className="text-secondary">Hizmetlerimiz</span>
             </Link>
-            <Link href="/contact" className="text-white text-sm hover:text-[#4A90E2] transition-colors ml-[24px] link-hover-animation">
+            <Link href="/contact" className="text-sm ml-[24px] link-hover-animation">
               <span className="text-primary">İletişim</span>
               <span className="text-secondary">İletişim</span>
             </Link>
