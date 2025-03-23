@@ -7,22 +7,23 @@ const Header = () => {
     <header className="h-1/12 flex items-center fixed w-full bg-transparent z-50">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-xl font-normal text-white">
-            emdAgency
+          <Link href="/" className="text-[20px] font-normal">
+            <span className="text-white">emd</span>
+            <span className="text-[#4A90E2]">Ajans</span>
           </Link>
-
-          <div className="flex items-center">
-            <Link href="/about" className="text-white text-sm hover:text-gray-300 transition-colors">
-              About Us
+          
+          <div className="flex items-center space-x-8">
+            <Link href="/about" className="text-white text-sm hover:text-[#4A90E2] transition-colors ml-[24px]">
+              Hakkımızda
             </Link>
-            <Link href="/portfolio" className="text-white text-sm hover:text-gray-300 transition-colors ml-[24px]">
-              Portfolio
+            <Link href="/portfolio" className="text-white text-sm hover:text-[#4A90E2] transition-colors ml-[24px]">
+              Projelerimiz
             </Link>
-            <Link href="/services" className="text-white text-sm hover:text-gray-300 transition-colors ml-[24px]">
-              Services
+            <Link href="/services" className="text-white text-sm hover:text-[#4A90E2] transition-colors ml-[24px]">
+              Hizmetlerimiz
             </Link>
-            <Link href="/contact" className="text-white text-sm hover:text-gray-300 transition-colors ml-[24px]">
-              Contact Us
+            <Link href="/contact" className="text-white text-sm hover:text-[#4A90E2] transition-colors ml-[24px]">
+              İletişim
             </Link>
           </div>
         </div>
@@ -31,4 +32,4 @@ const Header = () => {
   );
 };
 
-export default Header; 
+export default Header;
