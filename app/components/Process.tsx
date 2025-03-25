@@ -45,46 +45,54 @@ const Process = () => {
       <div className="container mx-auto px-4">
         <h2 className="text-2xl font-normal text-center mb-12">Process</h2>
         
-        <div className="relative">
-          {/* Progress Line */}
-          <div className="absolute top-[60px] left-0 w-full h-[2px] bg-gray-200">
-            <div 
-              className="h-full bg-[#4A90E2] transition-all duration-300"
-              style={{ width: `${((currentStep + 1) / processSteps.length) * 100}%` }}
-            />
-          </div>
-
-          {/* Steps */}
-          <div className="flex justify-between relative mb-16">
+        <div className="flex flex-col gap-8">
+          {/* Steps with Progress Line */}
+          <div className="grid grid-cols-[1fr_auto_1fr_auto_1fr] items-center">
             {processSteps.map((step, index) => (
-              <div 
-                key={step.number}
-                className={`flex flex-col items-center relative ${
-                  index <= currentStep ? 'text-[#4A90E2]' : 'text-gray-400'
-                }`}
-              >
+              <>
                 <div 
-                  className={`w-[40px] h-[40px] rounded-full flex items-center justify-center border-2 transition-colors duration-300 bg-white
-                    ${index <= currentStep ? 'border-[#4A90E2] text-[#4A90E2]' : 'border-gray-300 text-gray-400'}`}
+                  key={step.number}
+                  className="flex flex-col items-center gap-4"
                 >
-                  {step.number}
+                  <div className="flex flex-col items-center">
+                    <div className={`w-[48px] h-[48px] rounded-full flex items-center justify-center border-2 
+                      ${index <= currentStep ? 'border-[#001f3f]' : 'border-gray-300'}`}
+                    >
+                      <div className={`w-[32px] h-[32px] rounded-full flex items-center justify-center text-sm
+                        ${index <= currentStep ? 'bg-[#001f3f] text-white' : 'bg-transparent text-gray-400'}`}
+                      >
+                        {step.number}
+                      </div>
+                    </div>
+                    <span className={`mt-4 font-medium text-center ${index <= currentStep ? 'text-[#001f3f]' : 'text-gray-400'}`}>
+                      {step.title}
+                    </span>
+                  </div>
                 </div>
-                <span className="mt-12 font-medium">{step.title}</span>
-              </div>
+                {index < processSteps.length - 1 && (
+                  <div className="flex items-center h-[2px] min-w-[100px] md:min-w-[200px]">
+                    <div 
+                      className={`h-full w-full transition-all duration-300 ${
+                        index < currentStep ? 'bg-[#001f3f]' : 'bg-gray-200'
+                      }`} 
+                    />
+                  </div>
+                )}
+              </>
             ))}
           </div>
 
           {/* Content */}
-          <div className="max-w-3xl mx-auto">
-            <div className="flex items-center">
+          <div className="max-w-3xl mx-auto w-full mt-8">
+            <div className="flex items-center gap-4">
               <IconButton 
                 onClick={handlePrevStep}
-                className="text-[#4A90E2] hover:bg-[#4A90E2]/10"
+                className="text-[#001f3f] hover:bg-[#001f3f]/10"
               >
                 <ArrowBackIosNewIcon />
               </IconButton>
 
-              <div className="flex-1 px-8">
+              <div className="flex-1 px-4">
                 <h3 className="text-xl font-medium mb-4 text-center">
                   {processSteps[currentStep].title}
                 </h3>
@@ -95,7 +103,7 @@ const Process = () => {
 
               <IconButton 
                 onClick={handleNextStep}
-                className="text-[#4A90E2] hover:bg-[#4A90E2]/10"
+                className="text-[#001f3f] hover:bg-[#001f3f]/10"
               >
                 <ArrowForwardIosIcon />
               </IconButton>
