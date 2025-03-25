@@ -15,7 +15,7 @@ const processSteps: ProcessStep[] = [
   {
     number: 1,
     title: 'Plan',
-    description: 'We emphasize on planning and get everything documented leaving nothing for assumption or chance to avoid miscommunication. We jot down how we are going to proceed further, define the project plan including detailed technical specifications, devise the design and branding guidelines of the project, and get confirmation and approval from the clients\' end on the documents and materials.'
+    description: 'We create detailed technical specifications and project guidelines through comprehensive documentation. Our planning phase ensures clear communication and client approval on all project aspects before proceeding.'
   },
   {
     number: 2,
@@ -84,26 +84,32 @@ const Process = () => {
 
           {/* Content */}
           <div className="max-w-3xl mx-auto w-full mt-8">
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 min-h-[200px]">
               <IconButton 
                 onClick={handlePrevStep}
-                className="text-[#001f3f] hover:bg-[#001f3f]/10"
+                className="text-[#001f3f] hover:bg-[#001f3f]/10 self-center"
               >
                 <ArrowBackIosNewIcon />
               </IconButton>
 
-              <div className="flex-1 px-4">
-                <h3 className="text-xl font-medium mb-4 text-center">
-                  {processSteps[currentStep].title}
-                </h3>
-                <p className="text-gray-600 text-center leading-relaxed">
-                  {processSteps[currentStep].description}
-                </p>
+              <div className="flex-1 px-4 flex flex-col justify-center h-full">
+                <div className="h-[40px] flex items-center justify-center">
+                  <h3 className="text-xl font-medium text-center">
+                    {processSteps[currentStep].title}
+                  </h3>
+                </div>
+                <div className="h-[120px] flex items-center justify-center overflow-y-auto">
+                  <div className="w-full max-w-[600px] mx-auto px-4">
+                    <p className="text-gray-600 text-center leading-relaxed">
+                      {processSteps[currentStep].description}
+                    </p>
+                  </div>
+                </div>
               </div>
 
               <IconButton 
                 onClick={handleNextStep}
-                className="text-[#001f3f] hover:bg-[#001f3f]/10"
+                className="text-[#001f3f] hover:bg-[#001f3f]/10 self-center"
               >
                 <ArrowForwardIosIcon />
               </IconButton>
