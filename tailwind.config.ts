@@ -13,10 +13,7 @@ const config: Config = {
           300: '#D1D5DB',
         }
       },
-      spacing: {
-        4: '1rem',
-        24: '6rem',
-      }
+      spacing: true, // Enable all spacing utilities
     },
   },
   plugins: [],

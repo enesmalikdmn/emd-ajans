@@ -23,9 +23,9 @@ const Header = () => {
 
   return (
     <header className={`h-1/12 flex items-center fixed w-full z-50 transition-colors duration-300 ${!isHomePage || isScrolled ? 'bg-[#001f3f]' : 'bg-transparent'}`}>
-      <nav className="container mx-auto px-4 py-4">
+      <nav className="container mx-auto px-2 py-2">
         <div className="flex items-center justify-between">
-          <Link href="/" className="relative w-[180px] h-[120px]">
+          <Link href="/" className="relative w-[180px] h-[80px]">
             <Image
               src="/images/logo.png"
               alt="EMD Ajans Logo"
