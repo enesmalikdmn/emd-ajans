@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { IconButton } from '@mui/material';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import React from 'react';
 
 interface ProcessStep {
   number: number;
@@ -51,9 +52,8 @@ const Process = () => {
           {/* Steps with Progress Line */}
           <div className="grid grid-cols-[1fr_auto_1fr_auto_1fr] items-center">
             {processSteps.map((step, index) => (
-              <>
+              <React.Fragment key={`step-${step.number}`}>
                 <div 
-                  key={step.number}
                   className="flex flex-col items-center gap-4"
                 >
                   <div className="flex flex-col items-center">
@@ -80,7 +80,7 @@ const Process = () => {
                     />
                   </div>
                 )}
-              </>
+              </React.Fragment>
             ))}
           </div>
 
