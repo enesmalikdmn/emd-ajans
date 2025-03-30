@@ -1,16 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import ThemeRegistry from './components/ThemeRegistry';
+import Footer from "./components/Footer";
 
-const inter = Inter({ 
-  subsets: ["latin"],
-  display: 'swap',
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "emdAgency",
-  description: "We plan, design and develop digital products.",
+  title: "EMD Agency",
+  description: "Modern ve kullanıcı dostu web çözümleri",
 };
 
 export default function RootLayout({
@@ -19,9 +16,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.className}>
-      <body>
-        <ThemeRegistry>{children}</ThemeRegistry>
+    <html lang="tr">
+      <body className={inter.className}>
+        <main className="min-h-screen">{children}</main>
+        <Footer />
       </body>
     </html>
   );
