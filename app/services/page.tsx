@@ -5,7 +5,7 @@ export default function ServicesPage() {
   return (
     <main>
       <Header />
-      <div className="pt-20">
+      <div className="pt-32 min-h-screen bg-gray-50">
         <Services />
       </div>
     </main>

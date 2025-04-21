@@ -26,7 +26,7 @@ const processSteps: ProcessStep[] = [
   {
     number: 3,
     title: 'Geliştirme',
-    description: 'En güncel teknolojileri kullanarak web sitenizi kodluyoruz. Mobil uyumlu, hızlı ve güvenli bir site geliştirirken, SEO dostu yapıyı da göz önünde bulunduruyoruz. Son olarak detaylı testler yaparak sitenin sorunsuz çalışmasını sağlıyoruz.'
+    description: 'En güncel teknolojileri kullanarak web sitenizi hayat geçiriyoruz. SEO dostu, mobil uyumlu, hızlı ve güvenli bir site sunuyoruz. Son olarak detaylı testler yaparak sitenin sorunsuz çalışmasını sağlıyoruz.'
   }
 ];
 
