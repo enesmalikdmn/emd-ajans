@@ -15,7 +15,7 @@ const About = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="space-y-6"
           >
-            <h2 className="text-[#0A2342] text-lg font-medium">Hakkımızda</h2>
+            <h2 className="text-[#707070] text-lg font-medium">Hakkımızda</h2>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0A2342] leading-tight">
               Yeni Ürün Geliştirme Ekibi
             </h1>
@@ -24,10 +24,10 @@ const About = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="relative h-[150px] md:h-[200px] lg:h-[250px]"
+            className="relative h-[120px] md:h-[160px] lg:h-[200px]"
           >
             <Image
-              src="/images/19720.jpg"
+              src="/images/about-page-illustrator.png"
               alt="Product Development Team Illustration"
               fill
               className="object-contain"
