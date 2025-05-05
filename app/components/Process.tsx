@@ -57,22 +57,22 @@ const Process = () => {
                   className="flex flex-col items-center gap-4"
                 >
                   <div className="flex flex-col items-center">
-                    <div className={`w-[48px] h-[48px] rounded-full flex items-center justify-center border-2 
+                    <div className={`w-[36px] h-[36px] sm:w-[48px] sm:h-[48px] rounded-full flex items-center justify-center border-2 
                       ${index <= currentStep ? 'border-[#001f3f]' : 'border-gray-300'}`}
                     >
-                      <div className={`w-[32px] h-[32px] rounded-full flex items-center justify-center text-sm
+                      <div className={`w-[28px] h-[28px] sm:w-[32px] sm:h-[32px] rounded-full flex items-center justify-center text-sm
                         ${index <= currentStep ? 'bg-[#001f3f] text-white' : 'bg-transparent text-gray-400'}`}
                       >
                         {step.number}
                       </div>
                     </div>
-                    <span className={`mt-4 font-medium text-center ${index <= currentStep ? 'text-[#001f3f]' : 'text-gray-400'}`}>
+                    <span className={`mt-4 text-xs sm:text-sm md:text-base lg:text-lg font-medium text-center ${index <= currentStep ? 'text-[#001f3f]' : 'text-gray-400'}`}>
                       {step.title}
                     </span>
                   </div>
                 </div>
                 {index < processSteps.length - 1 && (
-                  <div className="flex items-center h-[2px] min-w-[100px] md:min-w-[200px]">
+                  <div className="flex items-center h-[2px] min-w-[80px] md:min-w-[140px] sm:min-w-[120px]">
                     <div 
                       className={`h-full w-full transition-all duration-300 ${
                         index < currentStep ? 'bg-[#001f3f]' : 'bg-gray-200'
