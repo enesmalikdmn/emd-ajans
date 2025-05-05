@@ -117,11 +117,11 @@ const Process = () => {
                 aria-labelledby={`step-${processSteps[currentStep].number}`}
               >
                 <div className="h-[30px] sm:h-[35px] md:h-[40px] flex items-center justify-center">
-                  <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-center">
+                  <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-medium text-gray-600">
                     {processSteps[currentStep].title}
                   </h3>
                 </div>
-                <div className="h-[100px] sm:h-[120px] md:h-[140px] flex items-center justify-center overflow-y-auto">
+                <div className="h-[120px] sm:h-[140px] md:h-[160px] flex items-center justify-center overflow-y-auto">
                   <div className="w-full max-w-[600px] mx-auto px-2 sm:px-3 md:px-4">
                     <p className="text-gray-600 text-center leading-relaxed text-xs sm:text-sm md:text-base lg:text-lg">
                       {processSteps[currentStep].description}
