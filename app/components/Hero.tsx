@@ -44,7 +44,7 @@ const Hero = () => {
                 ease: "easeOut",
                 delay: 0.4
               }}
-              className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto"
+              className="text-sm sm:text-base md:text-lg text-white/90 mb-8 max-w-2xl mx-auto"
             >
               Modern ve kullanıcı dostu web çözümleri ile
               <br />
