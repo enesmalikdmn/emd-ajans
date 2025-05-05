@@ -9,11 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        gray: {
-          300: '#D1D5DB',
-        }
+        primary: '#0A2342',
+        secondary: '#087E8B',
+        accent: '#707070',
       },
-      spacing: true, // Enable all spacing utilities
+      spacing: {
+        '128': '32rem',
+        '144': '36rem',
+      },
     },
   },
   plugins: [],
