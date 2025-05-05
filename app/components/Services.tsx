@@ -11,7 +11,7 @@ const Services = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       ),
-      description: 'Web sitenizi 4 hafta içinde teslim ediyor, projenizi hızla hayata geçiriyoruz.',
+      description: 'Web sitenizi 2 hafta içinde teslim ediyor, projenizi hızla hayata geçiriyoruz.',
       delay: 0.2
     },
     {
@@ -35,13 +35,13 @@ const Services = () => {
       delay: 0.4
     },
     {
-      title: '4 Haftalık Süreç',
+      title: '2 Haftalık Süreç',
       icon: (
         <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
         </svg>
       ),
-      description: 'Planlama, tasarım ve geliştirme süreçlerini 4 hafta içinde tamamlıyoruz.',
+      description: 'Planlama, tasarım ve geliştirme süreçlerini 2 hafta içinde tamamlıyoruz.',
       delay: 0.5
     },
     {
