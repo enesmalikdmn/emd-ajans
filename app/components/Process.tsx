@@ -85,8 +85,8 @@ const Process = () => {
           </div>
 
           {/* Content */}
-          <div className="max-w-3xl mx-auto w-full mt-8">
-            <div className="flex items-center gap-4 min-h-[200px]">
+          <div className="max-w-3xl mx-auto w-full mt-4 sm:mt-6 md:mt-8">
+            <div className="flex items-center gap-2 sm:gap-3 md:gap-4 min-h-[150px] sm:min-h-[180px] md:min-h-[200px]">
               <IconButton 
                 onClick={handlePrevStep}
                 disabled={currentStep === 0}
@@ -95,19 +95,35 @@ const Process = () => {
                     ? 'text-gray-300 cursor-not-allowed' 
                     : 'text-[#001f3f] hover:bg-[#001f3f]/10'
                 }`}
+                aria-label="Önceki adım"
+                sx={{
+                  '& .MuiSvgIcon-root': {
+                    fontSize: {
+                      xs: '1rem',
+                      sm: '1.25rem',
+                      md: '1.5rem',
+                      lg: '1.75rem'
+                    }
+                  }
+                }}
               >
                 <ArrowBackIosNewIcon />
               </IconButton>
 
-              <div className="flex-1 px-4 flex flex-col justify-center h-full">
-                <div className="h-[40px] flex items-center justify-center">
-                  <h3 className="text-xl font-medium text-center">
+              <div 
+                className="flex-1 px-2 sm:px-3 md:px-4 flex flex-col justify-center h-full"
+                id={`step-${processSteps[currentStep].number}-content`}
+                role="tabpanel"
+                aria-labelledby={`step-${processSteps[currentStep].number}`}
+              >
+                <div className="h-[30px] sm:h-[35px] md:h-[40px] flex items-center justify-center">
+                  <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-center">
                     {processSteps[currentStep].title}
                   </h3>
                 </div>
-                <div className="h-[120px] flex items-center justify-center overflow-y-auto">
-                  <div className="w-full max-w-[600px] mx-auto px-4">
-                    <p className="text-gray-600 text-center leading-relaxed">
+                <div className="h-[100px] sm:h-[120px] md:h-[140px] flex items-center justify-center overflow-y-auto">
+                  <div className="w-full max-w-[600px] mx-auto px-2 sm:px-3 md:px-4">
+                    <p className="text-gray-600 text-center leading-relaxed text-xs sm:text-sm md:text-base lg:text-lg">
                       {processSteps[currentStep].description}
                     </p>
                   </div>
