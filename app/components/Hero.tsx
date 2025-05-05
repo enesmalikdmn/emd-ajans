@@ -3,8 +3,26 @@
 import Image from 'next/image';
 import { Button } from '@mui/material';
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+
+const getButtonSize = (width: number) => {
+  if (width >= 1024) return 'large'; // lg
+  if (width >= 768) return 'medium'; // md
+  return 'small';
+};
 
 const Hero = () => {
+  const [buttonSize, setButtonSize] = useState<'small' | 'medium' | 'large'>('small');
+
+  useEffect(() => {
+    const handleResize = () => {
+      setButtonSize(getButtonSize(window.innerWidth));
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <section className="relative min-h-screen" aria-label="Hero section">
       {/* Background image */}
@@ -58,18 +76,16 @@ const Hero = () => {
                 ease: "easeOut",
                 delay: 0.5
               }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
+              className="flex flex-row gap-4 justify-center"
             >
               <Button 
                 variant="contained" 
                 color="primary"
-                size="large"
+                size={buttonSize}
                 href="/contact"
                 sx={{ 
                   borderRadius: 1,
                   textTransform: 'none',
-                  py: 1.5,
-                  px: 4,
                   '&:hover': {
                     backgroundColor: '#357ABD'
                   }
@@ -81,13 +97,11 @@ const Hero = () => {
               <Button 
                 variant="outlined" 
                 color="primary"
-                size="large"
+                size={buttonSize}
                 href="/services"
                 sx={{ 
                   borderRadius: 1,
                   textTransform: 'none',
-                  py: 1.5,
-                  px: 4,
                   borderColor: 'white',
                   color: 'white',
                   '&:hover': {
