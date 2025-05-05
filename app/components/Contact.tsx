@@ -103,8 +103,8 @@ const Contact = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#087E8B] focus:border-transparent"
+                  rows={6}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#087E8B] focus:border-transparent resize-none"
                   required
                 />
               </div>
