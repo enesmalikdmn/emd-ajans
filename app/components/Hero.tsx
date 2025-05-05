@@ -46,7 +46,9 @@ const Hero = () => {
               }}
               className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto"
             >
-              Modern ve kullanıcı dostu web çözümleri ile web sitenizi oluşturuyor ve yönetimini sağlıyoruz.
+              Modern ve kullanıcı dostu web çözümleri ile
+              <br />
+              web sitenizi oluşturuyor ve yönetimini sağlıyoruz.
             </motion.p>
             <motion.div 
               initial={{ opacity: 0, y: 50 }}
