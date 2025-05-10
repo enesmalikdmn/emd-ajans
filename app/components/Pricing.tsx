@@ -2,12 +2,12 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '@mui/material';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 const packages = [
   {
     title: 'Başlangıç Paketi',
-    price: '₺4.999',
+    price: '₺7.999',
     description: 'Küçük işletmeler ve girişimler için ideal başlangıç çözümü',
     features: [
       '5 Sayfa Tasarım',
@@ -23,7 +23,7 @@ const packages = [
   },
   {
     title: 'Kurumsal Paket',
-    price: '₺9.999',
+    price: '₺12.999',
     description: 'Orta ölçekli işletmeler için profesyonel web çözümü',
     features: [
       '10 Sayfa Tasarım',
@@ -42,7 +42,7 @@ const packages = [
   },
   {
     title: 'Premium Paket',
-    price: '₺14.999',
+    price: '₺17.999',
     description: 'Büyük işletmeler için kapsamlı dijital çözüm',
     features: [
       'Sınırsız Sayfa Tasarım',
@@ -82,7 +82,7 @@ const Pricing = () => {
               Size Özel Paketler
             </h1>
           </motion.div>
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
@@ -95,7 +95,7 @@ const Pricing = () => {
               className="object-contain"
               priority
             />
-          </motion.div>
+          </motion.div> */}
         </div>
       </section>
 
