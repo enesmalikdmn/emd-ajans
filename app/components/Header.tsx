@@ -29,7 +29,7 @@ const Header = () => {
 
   const navLinks = [
     { href: '/about', label: 'Hakkımızda' },
-    { href: '/portfolio', label: 'Projelerimiz' },
+    // { href: '/portfolio', label: 'Projelerimiz' },
     { href: '/services', label: 'Hizmetlerimiz' },
     { href: '/contact', label: 'İletişim' },
   ];
@@ -74,7 +74,7 @@ const Header = () => {
               variant="contained" 
               color="primary"
               size="small"
-              href="/contact"
+              href="/pricing"
               sx={{ 
                 ml: 4,
                 borderRadius: 1,
@@ -122,7 +122,7 @@ const Header = () => {
               variant="contained" 
               color="primary"
               size="small"
-              href="/contact"
+              href="/pricing"
               fullWidth
               sx={{ 
                 mt: 2,

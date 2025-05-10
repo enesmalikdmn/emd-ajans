@@ -1,28 +1,9 @@
 'use client';
 
 import Image from 'next/image';
-import { Button } from '@mui/material';
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
-
-const getButtonSize = (width: number) => {
-  if (width >= 1024) return 'large'; // lg
-  if (width >= 768) return 'medium'; // md
-  return 'small';
-};
 
 const Hero = () => {
-  const [buttonSize, setButtonSize] = useState<'small' | 'medium' | 'large'>('small');
-
-  useEffect(() => {
-    const handleResize = () => {
-      setButtonSize(getButtonSize(window.innerWidth));
-    };
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   return (
     <section className="relative min-h-screen" aria-label="Hero section">
       {/* Background image */}
@@ -68,52 +49,6 @@ const Hero = () => {
               <br />
               web sitenizi oluşturuyor ve yönetimini sağlıyoruz.
             </motion.p>
-            <motion.div 
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ 
-                duration: 0.8, 
-                ease: "easeOut",
-                delay: 0.5
-              }}
-              className="flex flex-row gap-4 justify-center"
-            >
-              <Button 
-                variant="contained" 
-                color="primary"
-                size={buttonSize}
-                href="/contact"
-                sx={{ 
-                  borderRadius: 1,
-                  textTransform: 'none',
-                  '&:hover': {
-                    backgroundColor: '#357ABD'
-                  }
-                }}
-                aria-label="Bize ulaşın"
-              >
-                Bize Ulaşın
-              </Button>
-              <Button 
-                variant="outlined" 
-                color="primary"
-                size={buttonSize}
-                href="/services"
-                sx={{ 
-                  borderRadius: 1,
-                  textTransform: 'none',
-                  borderColor: 'white',
-                  color: 'white',
-                  '&:hover': {
-                    borderColor: '#357ABD',
-                    backgroundColor: 'rgba(255, 255, 255, 0.1)'
-                  }
-                }}
-                aria-label="Hizmetlerimizi görüntüle"
-              >
-                Hizmetlerimiz
-              </Button>
-            </motion.div>
           </div>
         </div>
       </div>
