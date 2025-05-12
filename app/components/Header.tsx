@@ -45,7 +45,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <Link 
             href="/" 
-            className="relative w-[120px] h-[60px] md:w-[180px] md:h-[100px]"
+            className="relative w-[120px] h-[60px] md:w-[180px] md:h-[100px] cursor-pointer"
             aria-label="Ana sayfa"
           >
             <Image
@@ -63,7 +63,7 @@ const Header = () => {
               <Link 
                 key={link.href}
                 href={link.href}
-                className="text-sm link-hover-animation"
+                className="text-sm link-hover-animation cursor-pointer"
                 aria-label={link.label}
               >
                 <span className="text-primary">{link.label}</span>

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-// import Image from 'next/image';
+import Image from 'next/image';
 
 const Services = () => {
   const services = [
@@ -83,20 +83,20 @@ const Services = () => {
               Neden Biz?
             </h1>
           </motion.div>
-          {/* <motion.div
+          <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             className="relative h-[120px] md:h-[160px] lg:h-[200px]"
           >
             <Image
-              src="/images/services-illustration.png"
+              src="/images/services-illustration.webp"
               alt="Services Illustration"
               fill
               className="object-contain"
               priority
             />
-          </motion.div> */}
+          </motion.div>
         </div>
       </section>
 
