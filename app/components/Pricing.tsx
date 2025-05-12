@@ -136,12 +136,12 @@ const Pricing = () => {
                 <div className="mt-8">
                   <Button
                     variant="contained"
-                    color="primary"
                     fullWidth
                     href="/contact"
                     sx={{
                       borderRadius: 1,
                       textTransform: 'none',
+                      backgroundColor: '#087E8B !important',
                       py: 1.5,
                       '&:hover': {
                         backgroundColor: '#357ABD'

@@ -51,7 +51,7 @@ const Header = () => {
             <Image
               src="/images/logo.png"
               alt="EMD Ajans Logo"
-              fill
+              fill 
               className="object-contain"
               priority
             />
@@ -80,9 +80,6 @@ const Header = () => {
                 textTransform: 'none',
                 backgroundColor: '#087E8B !important',
                 color: '#fff !important',
-                '&:hover': {
-                  backgroundColor: '#0A2342 !important'
-                }
               }}
               aria-label="Paketlerimiz"
             >
