@@ -71,21 +71,22 @@ const Header = () => {
               </Link>
             ))}
             <Button
-              variant="contained" 
-              color="primary"
+              variant="contained"
               size="small"
               href="/pricing"
-              sx={{ 
+              sx={{
                 ml: 4,
                 borderRadius: 1,
                 textTransform: 'none',
+                backgroundColor: '#087E8B !important',
+                color: '#fff !important',
                 '&:hover': {
-                  backgroundColor: '#357ABD'
+                  backgroundColor: '#0A2342 !important'
                 }
               }}
-              aria-label="Teklif al"
+              aria-label="Paketlerimiz"
             >
-              Teklif Al
+              Paketlerimiz
             </Button>
           </div>
 
@@ -119,23 +120,24 @@ const Header = () => {
               </Link>
             ))}
             <Button
-              variant="contained" 
-              color="primary"
+              variant="contained"
               size="small"
               href="/pricing"
               fullWidth
-              sx={{ 
+              sx={{
                 mt: 2,
                 borderRadius: 1,
                 textTransform: 'none',
+                backgroundColor: '#087E8B !important',
+                color: '#fff !important',
                 '&:hover': {
-                  backgroundColor: '#357ABD'
+                  backgroundColor: '#0A2342 !important'
                 }
               }}
               onClick={() => setIsMobileMenuOpen(false)}
-              aria-label="Teklif al"
+              aria-label="Paketlerimiz"
             >
-              Teklif Al
+              Paketlerimiz
             </Button>
           </div>
         </div>
