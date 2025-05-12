@@ -11,7 +11,7 @@ export default function Home() {
       <Header />
       <Hero />
       <Process />
-      <Services />
+      <Services simpleHeader />
     </main>
   );
 }
