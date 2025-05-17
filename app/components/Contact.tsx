@@ -1,16 +1,29 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useSearchParams } from 'next/navigation';
 
 const Contact = () => {
+  const searchParams = useSearchParams();
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     message: '',
   });
+
+  useEffect(() => {
+    const paket = searchParams.get('paket');
+    if (paket) {
+      setFormData(prev => ({
+        ...prev,
+        message: `${paket} hakkında bilgi almak istiyorum.`
+      }));
+    }
+  }, [searchParams]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

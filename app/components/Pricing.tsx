@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '@mui/material';
+import Link from 'next/link';
 // import Image from 'next/image';
 
 const packages = [
@@ -157,22 +158,23 @@ const Pricing = () => {
                   </ul>
                 </div>
                 <div className="mt-8">
-                  <Button
-                    variant="contained"
-                    fullWidth
-                    href="/contact"
-                    sx={{
-                      borderRadius: 1,
-                      textTransform: 'none',
-                      backgroundColor: '#087E8B !important',
-                      py: 1.5,
-                      '&:hover': {
-                        backgroundColor: '#357ABD'
-                      }
-                    }}
-                  >
-                    Hemen Başlayın
-                  </Button>
+                  <Link href={`/contact?paket=${encodeURIComponent(pkg.title)}`} passHref>
+                    <Button
+                      variant="contained"
+                      fullWidth
+                      sx={{
+                        borderRadius: 1,
+                        textTransform: 'none',
+                        backgroundColor: '#087E8B !important',
+                        py: 1.5,
+                        '&:hover': {
+                          backgroundColor: '#357ABD'
+                        }
+                      }}
+                    >
+                      Hemen Başlayın
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </motion.div>
