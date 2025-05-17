@@ -15,9 +15,11 @@ const packages = [
       'İletişim Formu',
       'SEO Temel Optimizasyon',
       'Sosyal Medya Entegrasyonu',
-      '1 Yıl Ücretsiz Hosting',
-      '1 Yıl Ücretsiz Domain',
-      'Temel İçerik Yönetimi'
+      'İlk Yıl Ücretsiz Hosting',
+      'İlk Yıl Ücretsiz Domain',
+      'SSL Sertifikası',
+      'Temel İçerik Yönetimi',
+      'Haftalık Yedekleme'
     ],
     recommended: false
   },
@@ -31,12 +33,12 @@ const packages = [
       'Gelişmiş İletişim Formu',
       'SEO Optimizasyonu',
       'Sosyal Medya Entegrasyonu',
-      'Blog Sistemi',
-      '2 Yıl Ücretsiz Hosting',
-      '2 Yıl Ücretsiz Domain',
+      'İlk Yıl Ücretsiz Hosting',
+      'İlk Yıl Ücretsiz Domain',
       'Gelişmiş İçerik Yönetimi',
       'Google Analytics Entegrasyonu',
-      'SSL Sertifikası'
+      'SSL Sertifikası',
+      'Haftalık Yedekleme'
     ],
     recommended: true
   },
@@ -50,16 +52,16 @@ const packages = [
       'Özel Tasarım',
       'Gelişmiş SEO Optimizasyonu',
       'Sosyal Medya Entegrasyonu',
-      'Blog Sistemi',
-      '3 Yıl Ücretsiz Hosting',
-      '3 Yıl Ücretsiz Domain',
+      'İlk Yıl Ücretsiz Hosting',
+      'İlk Yıl Ücretsiz Domain',
       'Gelişmiş İçerik Yönetimi',
       'Google Analytics Entegrasyonu',
       'SSL Sertifikası',
       'E-posta Pazarlama Entegrasyonu',
       'Çoklu Dil Desteği',
       'Özel Animasyonlar',
-      '7/24 Teknik Destek'
+      '7/24 Teknik Destek',
+      'Haftalık Yedekleme'
     ],
     recommended: false
   }
@@ -77,7 +79,7 @@ const Pricing = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="space-y-6"
           >
-            <h2 className="text-[#707070] text-lg font-medium">Fiyatlandırma</h2>
+            <h2 className="text-[#707070] text-lg font-medium">Paketlerimiz</h2>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0A2342] leading-tight">
               Size Özel Paketler
             </h1>
