@@ -8,6 +8,7 @@ import Link from 'next/link';
 const packages = [
   {
     title: 'Başlangıç Paketi',
+    originalPrice: '₺9.999',
     price: '₺7.999',
     description: 'Küçük işletmeler ve girişimler için ideal başlangıç çözümü',
     features: [
@@ -26,6 +27,7 @@ const packages = [
   },
   {
     title: 'Kurumsal Paket',
+    originalPrice: '₺14.999',
     price: '₺12.999',
     description: 'Orta ölçekli işletmeler için profesyonel web çözümü',
     features: [
@@ -45,6 +47,7 @@ const packages = [
   },
   {
     title: 'Premium Paket',
+    originalPrice: '₺19.999',
     price: '₺17.999',
     description: 'Büyük işletmeler için kapsamlı dijital çözüm',
     features: [
@@ -68,6 +71,7 @@ const packages = [
   },
   {
     title: 'E-Ticaret Paketi',
+    originalPrice: '₺29.999',
     price: '₺24.999',
     description: 'Ürün satışı yapmak isteyen işletmeler için kapsamlı e-ticaret çözümü',
     features: [
@@ -144,7 +148,13 @@ const Pricing = () => {
               <div className="p-6 md:p-8 flex flex-col flex-1">
                 <div className="flex-1">
                   <h3 className="text-xl md:text-2xl font-bold text-[#0A2342] mb-2">{pkg.title}</h3>
-                  <div className="text-2xl md:text-3xl font-bold text-[#087E8B] mb-4">{pkg.price}</div>
+                  <div className="mb-4">
+                    <span className="text-lg text-gray-500 line-through mr-2">{pkg.originalPrice}</span>
+                    <span className="text-2xl md:text-3xl font-bold text-[#087E8B]">{pkg.price}</span>
+                    <span className="ml-2 inline-block bg-red-100 text-red-600 text-xs font-semibold px-2 py-1 rounded-md">
+                      İndirimli
+                    </span>
+                  </div>
                   <p className="text-gray-600 mb-6">{pkg.description}</p>
                   <ul className="space-y-3">
                     {pkg.features.map((feature, idx) => (
