@@ -31,6 +31,7 @@ const Header = () => {
     { href: '/about', label: 'Hakkımızda' },
     // { href: '/portfolio', label: 'Projelerimiz' },
     { href: '/services', label: 'Hizmetlerimiz' },
+    { href: '/pricing', label: 'Paketlerimiz' },
     { href: '/contact', label: 'İletişim' },
   ];
 
@@ -59,7 +60,7 @@ const Header = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
+            {navLinks.filter(link => link.href !== '/pricing').map((link) => (
               <Link 
                 key={link.href}
                 href={link.href}
@@ -116,26 +117,6 @@ const Header = () => {
                 {link.label}
               </Link>
             ))}
-            <Button
-              variant="contained"
-              size="small"
-              href="/pricing"
-              fullWidth
-              sx={{
-                mt: 2,
-                borderRadius: 1,
-                textTransform: 'none',
-                backgroundColor: '#087E8B !important',
-                color: '#fff !important',
-                '&:hover': {
-                  backgroundColor: '#0A2342 !important'
-                }
-              }}
-              onClick={() => setIsMobileMenuOpen(false)}
-              aria-label="Paketlerimiz"
-            >
-              Paketlerimiz
-            </Button>
           </div>
         </div>
       </nav>
