@@ -64,6 +64,27 @@ const packages = [
       'Haftalık Yedekleme'
     ],
     recommended: false
+  },
+  {
+    title: 'E-Ticaret Paketi',
+    price: '₺24.999',
+    description: 'Ürün satışı yapmak isteyen işletmeler için kapsamlı e-ticaret çözümü',
+    features: [
+      'Sınırsız Ürün ve Kategori',
+      'Güvenli Ödeme Entegrasyonu',
+      'Sipariş ve Stok Yönetimi',
+      'Mobil Uyumlu Tasarım',
+      'SEO Optimizasyonu',
+      'Kargo Entegrasyonu',
+      'Kampanya ve Kupon Yönetimi',
+      'Gelişmiş Raporlama',
+      'SSL Sertifikası',
+      'Sosyal Medya Entegrasyonu',
+      'Google Analytics Entegrasyonu',
+      '7/24 Teknik Destek',
+      'Haftalık Yedekleme'
+    ],
+    recommended: false
   }
 ];
 
@@ -102,15 +123,15 @@ const Pricing = () => {
       </section>
 
       {/* Pricing Packages */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="container mx-auto px-4 py-8 md:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8">
           {packages.map((pkg, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col ${
+              className={`bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col h-full ${
                 pkg.recommended ? 'ring-2 ring-[#087E8B] transform scale-105' : ''
               }`}
             >
@@ -119,10 +140,10 @@ const Pricing = () => {
                   En Çok Tercih Edilen
                 </div>
               )}
-              <div className="p-8 flex flex-col flex-1">
+              <div className="p-6 md:p-8 flex flex-col flex-1">
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-[#0A2342] mb-2">{pkg.title}</h3>
-                  <div className="text-3xl font-bold text-[#087E8B] mb-4">{pkg.price}</div>
+                  <h3 className="text-xl md:text-2xl font-bold text-[#0A2342] mb-2">{pkg.title}</h3>
+                  <div className="text-2xl md:text-3xl font-bold text-[#087E8B] mb-4">{pkg.price}</div>
                   <p className="text-gray-600 mb-6">{pkg.description}</p>
                   <ul className="space-y-3">
                     {pkg.features.map((feature, idx) => (
