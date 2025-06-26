@@ -101,7 +101,9 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         <div 
-          className={`md:hidden fixed top-[80px] left-0 w-full bg-[#001f3f] transition-all duration-300 ${
+          className={`md:hidden fixed top-[80px] left-0 w-full ${
+            !isHomePage || isScrolled ? 'bg-[#001f3f]' : 'bg-black/5 backdrop-blur-sm'
+          } transition-all duration-300 ${
             isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
           }`}
         >
