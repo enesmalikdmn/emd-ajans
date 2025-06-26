@@ -46,7 +46,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <Link 
             href="/" 
-            className="relative w-[120px] h-[60px] md:w-[180px] md:h-[100px] cursor-pointer"
+            className="relative w-[180px] h-[90px] md:w-[240px] md:h-[120px] cursor-pointer"
             aria-label="Ana sayfa"
           >
             <Image
